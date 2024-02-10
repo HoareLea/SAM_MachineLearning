@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAM.Analytical.MachineLearn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SAM.MachineLearning", "SAM.MachineLearning", "{BEEF9B85-B70A-4BDF-ABEE-CFACE321CA44}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{02DD8BFF-A57B-4D2B-BE00-90EC2B29F05F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAM Analytical", "Application\SAM Analytical\SAM Analytical.csproj", "{728EA283-22C7-42FA-BD39-D85801CACD7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{67F4955E-4064-481C-90D7-FFC23B4B5500}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67F4955E-4064-481C-90D7-FFC23B4B5500}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67F4955E-4064-481C-90D7-FFC23B4B5500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{728EA283-22C7-42FA-BD39-D85801CACD7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728EA283-22C7-42FA-BD39-D85801CACD7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728EA283-22C7-42FA-BD39-D85801CACD7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728EA283-22C7-42FA-BD39-D85801CACD7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{67F4955E-4064-481C-90D7-FFC23B4B5500} = {BEEF9B85-B70A-4BDF-ABEE-CFACE321CA44}
+		{728EA283-22C7-42FA-BD39-D85801CACD7D} = {02DD8BFF-A57B-4D2B-BE00-90EC2B29F05F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {78CE1D6D-9084-41E1-BACC-BD6F0294B574}

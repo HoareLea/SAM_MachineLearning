@@ -1,0 +1,20 @@
+﻿<Window x:Class="SAM_Analytical.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SAM_Analytical"
+        mc:Ignorable="d"
+        Title="SAM Analytical" Height="450" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Label Content="Space Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="TextBox_Name"  HorizontalAlignment="Left" Margin="91,14,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="120" PreviewTextInput="TextBox_PreviewTextInput"/>
+        </Grid>
+        <ListBox x:Name="ListBox_Results" Grid.Column="1"></ListBox>
+    </Grid>
+</Window>

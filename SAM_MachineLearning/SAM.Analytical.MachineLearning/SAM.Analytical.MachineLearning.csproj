@@ -4,10 +4,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="3.0.0-preview.23266.6" />
-  </ItemGroup>
-  <ItemGroup Label="SpaceType">
-    <None Include="SpaceType.mlnet">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <PackageReference Include="Microsoft.ML.FastTree" Version="3.0.0-preview.23266.6" />
   </ItemGroup>
 </Project>

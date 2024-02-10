@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <RootNamespace>SAM_Analytical</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SAM_MachineLearning\SAM.Analytical.MachineLearning\SAM.Analytical.MachineLearning.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(SolutionDir)SAM_MachineLearning\SAM.Analytical.MachineLearning\MachineLearningModels\SpaceType.mlnet&quot; &quot;$(ProjectDir)$(OutDir)SpaceType.mlnet&quot;" />
+  </Target>
+
+</Project>
