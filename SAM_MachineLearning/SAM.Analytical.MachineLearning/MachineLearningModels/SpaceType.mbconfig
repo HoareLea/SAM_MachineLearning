@@ -1,0 +1,524 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\jakub\\GitHub\\HoareLea\\SAM_MachineLearning\\files\\resources\\Analytical\\MachineLearning\\Data\\SpaceTypes.txt",
+    "Delimiter": "\t",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "name",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "volume",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "area",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "thinnessRatio",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentSpace1",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentSpace2",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentSpace3",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentSpace4",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentDoor1",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentDoor2",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentDoor3",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "adjacentDoor4",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "type",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "String",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.8222222222222223,
+        "RuntimeInSeconds": 1.222,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * e12 * e15",
+          "e0": {
+            "OutputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ],
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ],
+            "InputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ]
+          },
+          "e12": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "type",
+            "FeatureColumnName": "Features"
+          },
+          "e15": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e3": {
+            "InputColumnName": "adjacentSpace1",
+            "OutputColumnName": "adjacentSpace1"
+          },
+          "e4": {
+            "InputColumnName": "adjacentSpace2",
+            "OutputColumnName": "adjacentSpace2"
+          },
+          "e5": {
+            "InputColumnName": "adjacentSpace3",
+            "OutputColumnName": "adjacentSpace3"
+          },
+          "e6": {
+            "InputColumnName": "adjacentSpace4",
+            "OutputColumnName": "adjacentSpace4"
+          },
+          "e7": {
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4",
+              "volume",
+              "area",
+              "thinnessRatio",
+              "name",
+              "adjacentSpace1",
+              "adjacentSpace2",
+              "adjacentSpace3",
+              "adjacentSpace4"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "OutputColumnName": "type",
+            "InputColumnName": "type",
+            "AddKeyValueAnnotationsAsText": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.7055555555555556,
+        "RuntimeInSeconds": 0.801,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * e12 * e15",
+          "e0": {
+            "OutputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ],
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ],
+            "InputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ]
+          },
+          "e12": {
+            "L1Regularization": 3.30468965,
+            "L2Regularization": 0.495535165,
+            "LabelColumnName": "type",
+            "FeatureColumnName": "Features"
+          },
+          "e15": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e3": {
+            "InputColumnName": "adjacentSpace1",
+            "OutputColumnName": "adjacentSpace1"
+          },
+          "e4": {
+            "InputColumnName": "adjacentSpace2",
+            "OutputColumnName": "adjacentSpace2"
+          },
+          "e5": {
+            "InputColumnName": "adjacentSpace3",
+            "OutputColumnName": "adjacentSpace3"
+          },
+          "e6": {
+            "InputColumnName": "adjacentSpace4",
+            "OutputColumnName": "adjacentSpace4"
+          },
+          "e7": {
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4",
+              "volume",
+              "area",
+              "thinnessRatio",
+              "name",
+              "adjacentSpace1",
+              "adjacentSpace2",
+              "adjacentSpace3",
+              "adjacentSpace4"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "OutputColumnName": "type",
+            "InputColumnName": "type",
+            "AddKeyValueAnnotationsAsText": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.65,
+        "RuntimeInSeconds": 1.11,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * e9 * e15",
+          "e0": {
+            "OutputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ],
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ],
+            "InputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ]
+          },
+          "e15": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e3": {
+            "InputColumnName": "adjacentSpace1",
+            "OutputColumnName": "adjacentSpace1"
+          },
+          "e4": {
+            "InputColumnName": "adjacentSpace2",
+            "OutputColumnName": "adjacentSpace2"
+          },
+          "e5": {
+            "InputColumnName": "adjacentSpace3",
+            "OutputColumnName": "adjacentSpace3"
+          },
+          "e6": {
+            "InputColumnName": "adjacentSpace4",
+            "OutputColumnName": "adjacentSpace4"
+          },
+          "e7": {
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4",
+              "volume",
+              "area",
+              "thinnessRatio",
+              "name",
+              "adjacentSpace1",
+              "adjacentSpace2",
+              "adjacentSpace3",
+              "adjacentSpace4"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "OutputColumnName": "type",
+            "InputColumnName": "type",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e9": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 15,
+            "NumberOfTrees": 6,
+            "MaximumBinCountPerFeature": 325,
+            "FeatureFraction": 0.99999999,
+            "LearningRate": 0.098431039957324773,
+            "LabelColumnName": "type",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeOva",
+        "Score": 0.64722222222222225,
+        "RuntimeInSeconds": 1.8,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * e9 * e15",
+          "e0": {
+            "OutputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ],
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4"
+            ]
+          },
+          "e1": {
+            "OutputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ],
+            "InputColumnNames": [
+              "volume",
+              "area",
+              "thinnessRatio"
+            ]
+          },
+          "e15": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "InputColumnName": "name",
+            "OutputColumnName": "name"
+          },
+          "e3": {
+            "InputColumnName": "adjacentSpace1",
+            "OutputColumnName": "adjacentSpace1"
+          },
+          "e4": {
+            "InputColumnName": "adjacentSpace2",
+            "OutputColumnName": "adjacentSpace2"
+          },
+          "e5": {
+            "InputColumnName": "adjacentSpace3",
+            "OutputColumnName": "adjacentSpace3"
+          },
+          "e6": {
+            "InputColumnName": "adjacentSpace4",
+            "OutputColumnName": "adjacentSpace4"
+          },
+          "e7": {
+            "InputColumnNames": [
+              "adjacentDoor1",
+              "adjacentDoor2",
+              "adjacentDoor3",
+              "adjacentDoor4",
+              "volume",
+              "area",
+              "thinnessRatio",
+              "name",
+              "adjacentSpace1",
+              "adjacentSpace2",
+              "adjacentSpace3",
+              "adjacentSpace4"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e8": {
+            "OutputColumnName": "type",
+            "InputColumnName": "type",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e9": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 254,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "type",
+            "FeatureColumnName": "Features",
+            "DiskTranspose": false
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "OneHotEncoding",
+      "e1": "ReplaceMissingValues",
+      "e2": "FeaturizeText",
+      "e3": "FeaturizeText",
+      "e4": "FeaturizeText",
+      "e5": "FeaturizeText",
+      "e6": "FeaturizeText",
+      "e7": "Concatenate",
+      "e8": "MapValueToKey",
+      "e9": "FastTreeOva",
+      "e10": "FastForestOva",
+      "e11": "LbfgsLogisticRegressionOva",
+      "e12": "LbfgsMaximumEntropyMulti",
+      "e13": "SdcaMaximumEntropyMulti",
+      "e14": "SdcaLogisticRegressionOva",
+      "e15": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * e4 * e5 * e6 * e7 * e8 * (e9 + e10 + e11 + e12 + e13 + e14) * e15",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "C:\\Users\\jakub\\GitHub\\HoareLea\\SAM_MachineLearning\\SAM_MachineLearning\\SAM.Analytical.MachineLearning\\MachineLearningModels\\SpaceType.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 10,
+    "LabelColumn": "type",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
