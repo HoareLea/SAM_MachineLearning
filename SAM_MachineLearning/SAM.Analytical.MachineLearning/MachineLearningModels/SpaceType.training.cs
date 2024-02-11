@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.ML.Data;
-using Microsoft.ML.Trainers.FastTree;
 using Microsoft.ML.Trainers;
 using Microsoft.ML.Transforms;
 using Microsoft.ML;
@@ -99,7 +98,7 @@ namespace SAM_Analytical_MachineLearning
                                     .Append(mlContext.Transforms.Text.FeaturizeText(inputColumnName:@"adjacentSpace4",outputColumnName:@"adjacentSpace4"))      
                                     .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"adjacentDoor1",@"adjacentDoor2",@"adjacentDoor3",@"adjacentDoor4",@"volume",@"area",@"thinnessRatio",@"name",@"adjacentSpace1",@"adjacentSpace2",@"adjacentSpace3",@"adjacentSpace4"}))      
                                     .Append(mlContext.Transforms.Conversion.MapValueToKey(outputColumnName:@"type",inputColumnName:@"type",addKeyValueAnnotationsAsText:false))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.OneVersusAll(binaryEstimator:mlContext.BinaryClassification.Trainers.FastTree(new FastTreeBinaryTrainer.Options(){NumberOfLeaves=4,MinimumExampleCountPerLeaf=20,NumberOfTrees=4,MaximumBinCountPerFeature=254,FeatureFraction=1,LearningRate=0.1,LabelColumnName=@"type",FeatureColumnName=@"Features",DiskTranspose=false}),labelColumnName: @"type"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.LbfgsMaximumEntropy(new LbfgsMaximumEntropyMulticlassTrainer.Options(){L1Regularization=1F,L2Regularization=1F,LabelColumnName=@"type",FeatureColumnName=@"Features"}))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(outputColumnName:@"PredictedLabel",inputColumnName:@"PredictedLabel"));
 
             return pipeline;

@@ -30,17 +30,17 @@ namespace SAM_Analytical
             SpaceType.ModelInput modelInput = new SpaceType.ModelInput()
             {
                 Name = TextBox_Name.Text,
-                Volume = float.NaN,
-                Area = float.NaN,
-                ThinnessRatio = float.NaN,
-                AdjacentSpace1 = @"undefined",
-                AdjacentSpace2 = @"undefined",
-                AdjacentSpace3 = @"undefined",
-                AdjacentSpace4 = @"undefined",
-                AdjacentDoor1 = @"undefined",
-                AdjacentDoor2 = @"undefined",
-                AdjacentDoor3 = @"undefined",
-                AdjacentDoor4 = @"undefined",
+                Volume = 0.0F,
+                Area = 0.0F,
+                ThinnessRatio = 0.0F,
+                AdjacentSpace1 = @"unidentified",
+                AdjacentSpace2 = @"unidentified",
+                AdjacentSpace3 = @"unidentified",
+                AdjacentSpace4 = @"unidentified",
+                AdjacentDoor1 = @"unidentified",
+                AdjacentDoor2 = @"unidentified",
+                AdjacentDoor3 = @"unidentified",
+                AdjacentDoor4 = @"unidentified",
             };
 
             //Load model and predict output
