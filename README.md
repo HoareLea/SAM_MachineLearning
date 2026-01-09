@@ -3,20 +3,61 @@
 
 # SAM_MachineLearning
 
-<a href="https://github.com/HoareLea/SAM_Excel"><img src="https://github.com/HoareLea/SAM/blob/master/Grasshopper/SAM.Core.Grasshopper/Resources/SAM_Small.png" align="left" hspace="10" vspace="6"></a>
+<a href="https://github.com/SAM-BIM/SAM">
+  <img src="https://github.com/SAM-BIM/SAM/blob/master/Grasshopper/SAM.Core.Grasshopper/Resources/SAM_Small.png"
+       align="left" hspace="10" vspace="6">
+</a>
 
-**SAM** is part of SAM Toolkit that is designed to help engneers to create Analytical Model. Welcome and let's make the opensource journey continue. :handshake:
+**SAM_MachineLearning** is part of the **SAM (Sustainable Analytical Model) Toolkit** —  
+an open-source collection of tools designed to help engineers create, manage,
+and process analytical building models for energy and environmental analysis.
+
+This repository is dedicated to **experimental work and prototyping involving machine learning**
+within the SAM ecosystem.
+It provides a sandbox for exploring data-driven methods, learning-based models,
+and hybrid analytical–machine-learning workflows applied to building performance analysis.
+
+The content of this repository may evolve rapidly and is intended primarily
+for research, experimentation, and proof-of-concept development.
+
+---
+
+## Scope
+
+Typical areas of investigation include:
+- application of machine learning to SAM analytical data
+- surrogate and reduced-order models
+- pattern recognition and clustering in simulation results
+- hybrid workflows combining physics-based models and ML approaches
+
+The repository does not represent a stable API and may change as experiments progress.
+
+---
 
 ## Resources
-* [Wiki](https://github.com/HoareLea/SAM/wiki)
+- 📘 **SAM Wiki:** https://github.com/SAM-BIM/SAM/wiki  
+- 🧠 **SAM Core:** https://github.com/SAM-BIM/SAM  
+- 🧰 **Installers:** https://github.com/SAM-BIM/SAM_Deploy  
 
-## Installing
+---
 
-To install **SAM** from .exe just download and run [latest installer](https://github.com/SAM-BIM/SAM_Deploy/releases/latest) otherwise rebuild using VS [SAM](https://github.com/HoareLea/SAM)
+## Development notes
 
-## Licence ##
+- Target framework: **.NET / C#** (additional tools or languages may be explored)
+- Experimental code may not follow full SAM module conventions
+- New or modified `.cs` files must include the SPDX header from `COPYRIGHT_HEADER.txt`
 
-SAM is free software licenced under GNU Lesser General Public Licence - [https://www.gnu.org/licenses/lgpl-3.0.html](https://www.gnu.org/licenses/lgpl-3.0.html)  
-Each contributor holds copyright over their respective contributions.
-The project versioning (Git) records all such contribution source information.
-See [LICENSE](https://github.com/HoareLea/SAM_Template/blob/master/LICENSE) and [COPYRIGHT_HEADER](https://github.com/HoareLea/SAM/blob/master/COPYRIGHT_HEADER.txt).
+---
+
+## Licence
+
+This repository is free software licensed under the  
+**GNU Lesser General Public License v3.0 or later (LGPL-3.0-or-later)**.
+
+Each contributor retains copyright to their respective contributions.  
+The project history (Git) records authorship and provenance of all changes.
+
+See:
+- `LICENSE`
+- `NOTICE`
+- `COPYRIGHT_HEADER.txt`
