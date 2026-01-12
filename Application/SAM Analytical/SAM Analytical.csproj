@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /Y &quot;$(SolutionDir)SAM_MachineLearning\SAM.Analytical.MachineLearning\MachineLearningModels\SpaceType.mlnet&quot; &quot;$(ProjectDir)$(OutDir)SpaceType.mlnet&quot;" />
+    <Exec Command="set &quot;filePath=$(SolutionDir)SAM_MachineLearning\SAM.Analytical.MachineLearning\MachineLearningModels\SpaceType.mlnet&quot;&#xA; &#xA;if exist &quot;%25filePath%25&quot; (&#xA;  if not exist &quot;$(TargetDir)&quot; mkdir &quot;$(TargetDir)&quot;&#xA;  copy /Y &quot;%25filePath%25&quot; &quot;$(TargetDir)SpaceType.mlnet&quot;&#xA;)" />
   </Target>
 
 </Project>
